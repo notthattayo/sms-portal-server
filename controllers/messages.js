@@ -91,7 +91,7 @@ export const sendMessage = async (req, res) => {
 };
 
 export const getNewMessages = async (req, res) => {
-  console.log("hitting-message", req);
+  console.log("hitting-message", req.query);
   io.emit("new-message", [req.query]);
   res.send("message updated");
 };
